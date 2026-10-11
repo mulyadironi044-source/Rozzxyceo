@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>rozzxyjb ceo — Luxury E-Commerce &amp; Premium Gear Rental</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f4f6fb',
+              100: '#e8edf6',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#0b132b',
+              gold: '#e0a96d',
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            'float': 'float 4s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 2.5s infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.85' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Custom ultra-smooth scrollbar & glow */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-modal {
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .radial-bg {
+      background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+    }
+    /* Scroll reveal transitions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen relative overflow-x-hidden">
+<!-- TOP ANNOUNCEMENT / STATUS BAR -->
+<div class="bg-gradient-to-r from-blue-700 via-indigo-700 to-slate-900 text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-white/20 text-white tracking-wider uppercase">Official Suite</span>
+<span>✨ Platform Terpadu E-Commerce &amp; Rental Gear Kreatif Eksklusif • Garansi 100% Original &amp; Asuransi Proteksi</span>
+<button class="ml-4 underline hover:text-white/80 transition-all font-semibold flex items-center gap-1" onclick="switchView('admin')">
+<i class="w-3.5 h-3.5" data-lucide="shield-check"></i> Masuk Admin Portal
+    </button>
+</div>
+<!-- NAVIGATION HEADER (STICKY + GLASSMORPHISM) -->
+<header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Logo Brand -->
+<a class="flex items-center gap-3 group cursor-pointer" href="#home" onclick="switchView('store')">
+<div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/25 group-hover:scale-105 group-hover:shadow-blue-500/40 transition-all duration-300">
+<i class="w-6 h-6 text-white transition-transform group-hover:rotate-6" data-lucide="crown"></i>
+</div>
+<div>
+<span class="font-display text-2xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-blue-400 bg-clip-text text-transparent">
+            rozzxyjb ceo
+          </span>
+<span class="block text-[10px] uppercase font-semibold tracking-widest text-slate-400">Exclusive Store &amp; Rental</span>
+</div>
+</a>
+<!-- Desktop Navigation Menu -->
+<nav class="hidden md:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-slate-800/80" id="public-nav-links">
+<a class="nav-item px-5 py-2 rounded-full text-sm font-medium hover:text-white hover:bg-slate-800/80 transition-all duration-200 text-slate-300" href="#catalog" onclick="filterCatalog('all')">Katalog</a>
+<a class="nav-item px-5 py-2 rounded-full text-sm font-medium hover:text-white hover:bg-slate-800/80 transition-all duration-200 text-slate-300 flex items-center gap-1.5" href="#catalog" onclick="filterCatalog('shop')">
+<i class="w-4 h-4 text-blue-400" data-lucide="shopping-bag"></i> Shop
+        </a>
+<a class="nav-item px-5 py-2 rounded-full text-sm font-medium hover:text-white hover:bg-slate-800/80 transition-all duration-200 text-slate-300 flex items-center gap-1.5" href="#catalog" onclick="filterCatalog('rental')">
+<i class="w-4 h-4 text-indigo-400" data-lucide="calendar-clock"></i> Rental Gear
+        </a>
+<a class="nav-item px-5 py-2 rounded-full text-sm font-medium hover:text-white hover:bg-slate-800/80 transition-all duration-200 text-slate-300 flex items-center gap-1.5" href="#contact">
+<i class="w-4 h-4 text-emerald-400" data-lucide="phone-call"></i> Saluran Kontak
+        </a>
+</nav>
+<!-- Right Action Toolbar -->
+<div class="flex items-center gap-3">
+<!-- Switch to Admin View / Back Button -->
+<button class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-300 hover:text-white transition-all duration-300 flex items-center gap-2 shadow-sm" id="toggle-admin-btn" onclick="toggleMode()">
+<i class="w-4 h-4 text-blue-400" data-lucide="layout-dashboard"></i>
+<span id="admin-btn-text">Admin Manager</span>
+</button>
+<!-- Cart Button with Animated Count Badge -->
+<button class="relative p-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 group" onclick="toggleCartDrawer(true)">
+<i class="w-5 h-5" data-lucide="shopping-cart"></i>
+<span class="hidden sm:inline text-xs font-bold tracking-wide">Keranjang</span>
+<span class="w-5 h-5 bg-white text-blue-700 rounded-full text-xs font-extrabold flex items-center justify-center transition-transform group-hover:scale-110" id="cart-counter">0</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ========================================== -->
+<!-- MAIN CLIENT VIEW (FRONT-END STORE & RENTAL)-->
+<!-- ========================================== -->
+<main class="transition-opacity duration-300" id="client-view">
+<!-- HERO SECTION -->
+<section class="relative pt-12 pb-24 md:py-24 overflow-hidden radial-bg" id="home">
+<div class="absolute inset-0 pointer-events-none -z-10 opacity-30">
+<div class="absolute top-10 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-float"></div>
+<div class="absolute bottom-10 right-1/4 w-80 h-80 bg-indigo-600/20 rounded-full blur-3xl animate-float" style="animation-delay: -2s;"></div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Hero Copy -->
+<div class="lg:col-span-7 space-y-7 animate-fade-in-up">
+<div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-blue-400 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span>Koleksi 2025 Terkini &amp; Pelayanan Premium VIP</span>
+</div>
+<h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12]">
+              Beli Aset Kreatif Terbaik. <br class="hidden sm:inline"/>
+<span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-amber-200 bg-clip-text text-transparent">
+                Sewa Gear Impian
+              </span> Fleksibel.
+            </h1>
+<p class="text-base sm:text-lg text-slate-300/90 max-w-2xl leading-relaxed font-normal">
+              Selamat datang di <strong class="text-white font-semibold">rozzxyjb ceo</strong>. Destinasi eksklusif untuk kamera cinema, audio pro, lensa premium, gadget flagship serta layanan rental harian hingga mingguan tanpa birokrasi ribet.
+            </p>
+<!-- CTA Actions -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-7 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-xl shadow-blue-600/30 hover:shadow-blue-500/50 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center gap-2" href="#catalog" onclick="filterCatalog('shop')">
+<i class="w-4 h-4" data-lucide="shopping-bag"></i>
+                Jelajahi Toko (Shop)
+              </a>
+<a class="px-7 py-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-bold text-sm border border-slate-700/80 hover:border-slate-600 shadow-md hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2" href="#catalog" onclick="filterCatalog('rental')">
+<i class="w-4 h-4 text-indigo-400" data-lucide="calendar"></i>
+                Katalog Rental Gear
+              </a>
+</div>
+<!-- Trust Indicators -->
+<div class="pt-6 grid grid-cols-3 gap-6 border-t border-slate-800/80">
+<div>
+<p class="font-display text-2xl font-bold text-white">500+</p>
+<p class="text-xs text-slate-400 mt-0.5">Produk &amp; Gear Siap</p>
+</div>
+<div>
+<p class="font-display text-2xl font-bold text-white">2.4k+</p>
+<p class="text-xs text-slate-400 mt-0.5">Transaksi Sukses</p>
+</div>
+<div>
+<p class="font-display text-2xl font-bold text-emerald-400">100%</p>
+<p class="text-xs text-slate-400 mt-0.5">Asuransi All-Risk</p>
+</div>
+</div>
+</div>
+<!-- Hero Visual Banner Card -->
+<div class="lg:col-span-5 relative">
+<div class="relative mx-auto max-w-md rounded-3xl p-3 bg-gradient-to-b from-blue-500/30 via-slate-800/30 to-slate-900/80 border border-slate-700/60 shadow-2xl backdrop-blur-xl">
+<div class="relative overflow-hidden rounded-2xl aspect-[4/3] group">
+<img alt="Sony Cinema &amp; Leica Optics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" id="hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5m0F_jLhWUXge1vUEAH0ZOYCkJikDEJztNp-JLnnxfwjankySFPm6yOAbzl-HPrtU6vsKZW9TP7c_Ulq76-yM_RLrdbPWHOJ0kZCJ7udHjwLeRNlQBrh3B9ncdGaK7sOpwoTSc3Apx4r9Ufrge84txJs0cEgxhCfJKmCWhBFydfjjFwkr36ZVRO7sJI7f9AaqPkDbS9bFl4ujJOilwTH-pDNGtAa9AnvakDRrpHt1eNrlivez2xBX3Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+<!-- Floating Card Tag -->
+<div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/90 border border-slate-700/70 backdrop-blur-md flex items-center justify-between">
+<div>
+<span class="inline-block text-[10px] uppercase font-bold text-blue-400 tracking-wider">Highlight Pekan Ini</span>
+<h2 class="text-sm font-bold text-white">Cinema Package Alpha FX3</h2>
+<p class="text-xs text-slate-300">Beli Rp 54.900.000 • Sewa Rp 450.000/hari</p>
+</div>
+<button class="p-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-md" onclick="quickAddHeroItem()">
+<i class="w-4 h-4" data-lucide="plus"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: BENEFIT HIGHLIGHTS -->
+<section class="py-12 bg-slate-900/40 border-y border-slate-800/70">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="glass-card p-6 rounded-2xl hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-blue-600/15 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+<i class="w-6 h-6" data-lucide="shield-check"></i>
+</div>
+<h3 class="font-display text-base font-bold text-white">100% Produk Original</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">Garansi resmi distributor &amp; unit terkalibrasi teknisi profesional.</p>
+</div>
+<div class="glass-card p-6 rounded-2xl hover:border-indigo-500/50 hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-indigo-600/15 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-4">
+<i class="w-6 h-6" data-lucide="clock"></i>
+</div>
+<h3 class="font-display text-base font-bold text-white">Sewa Fleksibel</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">Pilihan durasi per 1 Hari, 3 Hari, atau Mingguan dengan diskon bertingkat.</p>
+</div>
+<div class="glass-card p-6 rounded-2xl hover:border-emerald-500/50 hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-emerald-600/15 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
+<i class="w-6 h-6" data-lucide="zap"></i>
+</div>
+<h3 class="font-display text-base font-bold text-white">Instant Deployment</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">Pengiriman kurir kilat khusus gear berharga, siap pakai di lokasi syuting.</p>
+</div>
+<div class="glass-card p-6 rounded-2xl hover:border-amber-500/50 hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-amber-600/15 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-4">
+<i class="w-6 h-6" data-lucide="headset"></i>
+</div>
+<h3 class="font-display text-base font-bold text-white">Respon CS Langsung</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">Terhubung langsung ke saluran WhatsApp dan Telegram resmi CEO rozzxyjb.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: CATALOG (SHOP & RENTAL CATEGORIES) -->
+<section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="catalog">
+<!-- Section Header & Filter Controls -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+<div>
+<span class="text-xs uppercase font-extrabold tracking-wider text-blue-400">Inventory Management</span>
+<h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-1">
+            Katalog Belanja &amp; Rental
+          </h2>
+<p class="text-sm text-slate-400 mt-2 max-w-xl">
+            Pilih antara pembelian permanen produk baru/refurbished resmi, atau penyewaan profesional dengan durasi terencana.
+          </p>
+</div>
+<!-- Filter Pill Tabs -->
+<div class="flex items-center gap-1.5 p-1.5 bg-slate-900 border border-slate-800 rounded-2xl">
+<button class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 bg-blue-600 text-white shadow-sm" id="btn-filter-all" onclick="filterCatalog('all')">
+            Semua Item
+          </button>
+<button class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white hover:bg-slate-800" id="btn-filter-shop" onclick="filterCatalog('shop')">
+<span class="inline-flex items-center gap-1.5"><i class="w-3.5 h-3.5" data-lucide="shopping-bag"></i> Beli (Shop)</span>
+</button>
+<button class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white hover:bg-slate-800" id="btn-filter-rental" onclick="filterCatalog('rental')">
+<span class="inline-flex items-center gap-1.5"><i class="w-3.5 h-3.5" data-lucide="calendar"></i> Sewa (Rental)</span>
+</button>
+</div>
+</div>
+<!-- Category Specific Filter Chips (Pill Bar) -->
+<div class="mb-6 overflow-x-auto pb-2 scrollbar-none">
+<div class="flex items-center gap-2.5 min-w-max" id="category-pills-container">
+<button class="px-4 py-2 rounded-xl text-xs font-bold border transition-all duration-200 bg-blue-600 text-white border-blue-500 shadow-lg shadow-blue-600/25 flex items-center gap-2" id="cat-pill-all" onclick="setSpecificCategory('all')">
+<span>Semua Kategori</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs font-medium border border-slate-800 bg-slate-900/70 text-slate-300 hover:text-white hover:border-slate-700 hover:bg-slate-800/80 transition-all duration-200 flex items-center gap-2" id="cat-pill-camera" onclick="setSpecificCategory('camera')">
+<span>🎥 Cinema Camera</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs font-medium border border-slate-800 bg-slate-900/70 text-slate-300 hover:text-white hover:border-slate-700 hover:bg-slate-800/80 transition-all duration-200 flex items-center gap-2" id="cat-pill-drone" onclick="setSpecificCategory('drone')">
+<span>🚁 Drone &amp; Aerial</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs font-medium border border-slate-800 bg-slate-900/70 text-slate-300 hover:text-white hover:border-slate-700 hover:bg-slate-800/80 transition-all duration-200 flex items-center gap-2" id="cat-pill-lens" onclick="setSpecificCategory('lens')">
+<span>🔍 Cinema Lenses</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs font-medium border border-slate-800 bg-slate-900/70 text-slate-300 hover:text-white hover:border-slate-700 hover:bg-slate-800/80 transition-all duration-200 flex items-center gap-2" id="cat-pill-audio" onclick="setSpecificCategory('audio')">
+<span>🎙️ Audio Pro</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs font-medium border border-slate-800 bg-slate-900/70 text-slate-300 hover:text-white hover:border-slate-700 hover:bg-slate-800/80 transition-all duration-200 flex items-center gap-2" id="cat-pill-lighting" onclick="setSpecificCategory('lighting')">
+<span>💡 Lighting &amp; Studio</span>
+</button>
+</div>
+</div>
+<!-- Live Search & Sort Toolbar -->
+<div class="mb-8 flex flex-col sm:flex-row gap-4 items-center justify-between bg-slate-900/50 p-4 rounded-2xl border border-slate-800/80">
+<div class="relative w-full sm:w-80">
+<i class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" data-lucide="search"></i>
+<input class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors" id="catalog-search" oninput="handleSearch(this.value)" placeholder="Cari nama kamera, drone, mic..." type="text"/>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<span class="text-xs text-slate-400 hidden sm:inline">Menampilkan:</span>
+<span class="px-3 py-1 rounded-lg bg-slate-800 text-xs font-bold text-blue-400" id="items-count-badge">6 Item Siap Order</span>
+</div>
+</div>
+<!-- Product Grid (Generated via JS) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7" id="product-grid">
+<!-- Rendered by JS -->
+</div>
+</section>
+<!-- SECTION: SALURAN KOMUNIKASI / CONTACT -->
+<section class="py-20 bg-gradient-to-b from-slate-950 via-slate-900/60 to-slate-950 border-t border-slate-800" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="text-xs uppercase font-extrabold tracking-wider text-emerald-400">Layanan Pelanggan Terintegrasi</span>
+<h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-1">
+            Hubungi Saluran Resmi Admin
+          </h2>
+<p class="text-sm text-slate-400 mt-2">
+            Saluran ini terhubung secara real-time. Info kontak dapat diatur dinamis oleh Manajemen <strong class="text-slate-200">rozzxyjb ceo</strong>.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+<!-- Channel: WhatsApp -->
+<a class="glass-card p-6 rounded-2xl group hover:border-emerald-500/60 hover:-translate-y-1 transition-all duration-300 block" href="https://wa.me/6281234567890" id="public-wa-link" target="_blank">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+<i class="w-6 h-6" data-lucide="message-circle"></i>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300">Fast Response</span>
+</div>
+<h3 class="font-display text-base font-bold text-white group-hover:text-emerald-300 transition-colors">WhatsApp Official</h3>
+<p class="text-sm font-semibold text-slate-300 mt-1" id="public-wa-display">+62 812-3456-7890</p>
+<span class="text-xs text-slate-400 mt-3 inline-flex items-center gap-1 group-hover:text-white transition-colors">
+              Chat Sekarang <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</span>
+</a>
+<!-- Channel: Telegram -->
+<a class="glass-card p-6 rounded-2xl group hover:border-sky-500/60 hover:-translate-y-1 transition-all duration-300 block" href="https://t.me/rozzxyjb_official" id="public-tg-link" target="_blank">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+<i class="w-6 h-6" data-lucide="send"></i>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-sky-500/10 text-sky-300">24/7 Channel</span>
+</div>
+<h3 class="font-display text-base font-bold text-white group-hover:text-sky-300 transition-colors">Telegram VIP</h3>
+<p class="text-sm font-semibold text-slate-300 mt-1" id="public-tg-display">@rozzxyjb_official</p>
+<span class="text-xs text-slate-400 mt-3 inline-flex items-center gap-1 group-hover:text-white transition-colors">
+              Buka Telegram <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</span>
+</a>
+<!-- Channel: Email Support -->
+<a class="glass-card p-6 rounded-2xl group hover:border-indigo-500/60 hover:-translate-y-1 transition-all duration-300 block" href="mailto:ceo@rozzxyjb.com" id="public-email-link">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+<i class="w-6 h-6" data-lucide="mail"></i>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300">Enterprise</span>
+</div>
+<h3 class="font-display text-base font-bold text-white group-hover:text-indigo-300 transition-colors">Official Email</h3>
+<p class="text-sm font-semibold text-slate-300 mt-1" id="public-email-display">ceo@rozzxyjb.com</p>
+<span class="text-xs text-slate-400 mt-3 inline-flex items-center gap-1 group-hover:text-white transition-colors">
+              Kirim Surat <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- ==================================================== -->
+<!-- BACK-OFFICE / ADMIN MANAGER VIEW (REACT-STYLE CRUD)  -->
+<!-- ==================================================== -->
+<section class="hidden min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="admin-view">
+<!-- Admin Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-slate-800">
+<div>
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded-md bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-wider">
+            Management Portal
+          </span>
+<span class="text-xs text-slate-500">Live Synchronized State</span>
+</div>
+<h2 class="font-display text-3xl font-extrabold text-white mt-2">
+          Dashboard Admin &amp; Manager rozzxyjb
+        </h2>
+<p class="text-sm text-slate-400 mt-1">
+          Kontrol langsung katalog produk, tarif rental, deskripsi, serta konfigurasi saluran komunikasi publik.
+        </p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 transition-all flex items-center gap-2" onclick="switchView('store')">
+<i class="w-4 h-4" data-lucide="eye"></i> Lihat Halaman Pembeli
+        </button>
+<button class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow-lg shadow-blue-600/30 transition-all flex items-center gap-2" onclick="openCreateModal()">
+<i class="w-4 h-4" data-lucide="plus-circle"></i> Tambah Item Baru
+        </button>
+</div>
+</div>
+<!-- Admin Metric Overview -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 my-8">
+<div class="glass-card p-5 rounded-2xl">
+<span class="text-xs font-semibold text-slate-400">Total Produk di Katalog</span>
+<div class="flex items-baseline justify-between mt-2">
+<p class="text-2xl font-display font-extrabold text-white" id="admin-metric-total">6</p>
+<span class="text-xs text-emerald-400 font-semibold">+100% Active</span>
+</div>
+</div>
+<div class="glass-card p-5 rounded-2xl">
+<span class="text-xs font-semibold text-slate-400">Item Dijual (Shop)</span>
+<div class="flex items-baseline justify-between mt-2">
+<p class="text-2xl font-display font-extrabold text-blue-400" id="admin-metric-shop">3</p>
+<span class="text-xs text-slate-400">Siap Kirim</span>
+</div>
+</div>
+<div class="glass-card p-5 rounded-2xl">
+<span class="text-xs font-semibold text-slate-400">Gear Rental Aktif</span>
+<div class="flex items-baseline justify-between mt-2">
+<p class="text-2xl font-display font-extrabold text-indigo-400" id="admin-metric-rental">3</p>
+<span class="text-xs text-slate-400">Opsi Harian/Mingguan</span>
+</div>
+</div>
+<div class="glass-card p-5 rounded-2xl">
+<span class="text-xs font-semibold text-slate-400">Status Saluran Admin</span>
+<div class="flex items-baseline justify-between mt-2">
+<p class="text-2xl font-display font-extrabold text-emerald-400">Online</p>
+<span class="text-xs text-emerald-400 font-semibold">Tersinkronisasi</span>
+</div>
+</div>
+</div>
+<!-- Admin Tabs: [Kelola Produk] & [Saluran Komunikasi] -->
+<div class="flex items-center gap-3 border-b border-slate-800 mb-8 pb-3">
+<button class="px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white transition-all flex items-center gap-2" id="admin-tab-btn-products" onclick="switchAdminTab('products')">
+<i class="w-4 h-4" data-lucide="package"></i> Kelola Produk &amp; Rental (CRUD)
+      </button>
+<button class="px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2" id="admin-tab-btn-channels" onclick="switchAdminTab('channels')">
+<i class="w-4 h-4" data-lucide="settings-2"></i> Pengaturan Saluran Komunikasi
+      </button>
+</div>
+<!-- ADMIN SUBTAB 1: PRODUCTS TABLE (CRUD) -->
+<div class="space-y-6" id="admin-subtab-products">
+<div class="bg-slate-900/60 rounded-2xl border border-slate-800 overflow-hidden shadow-xl">
+<div class="p-4 sm:p-6 border-b border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div>
+<h3 class="font-display text-lg font-bold text-white">Daftar Inventaris Produk &amp; Rental</h3>
+<p class="text-xs text-slate-400">Edit nama, harga, deskripsi, ganti foto atau hapus item secara instan.</p>
+</div>
+<div class="relative w-full sm:w-64">
+<i class="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-lucide="search"></i>
+<input class="w-full bg-slate-950 border border-slate-800 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blue-500" oninput="adminFilterSearch(this.value)" placeholder="Cari di inventaris..." type="text"/>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-950/80 text-[11px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-800">
+<th class="p-4">Foto &amp; Item</th>
+<th class="p-4">Tipe / Kategori</th>
+<th class="p-4">Struktur Harga</th>
+<th class="p-4">Deskripsi</th>
+<th class="p-4 text-right">Aksi Manajemen</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-800/80 text-xs text-slate-300" id="admin-products-table-body">
+<!-- Rendered via JS -->
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- ADMIN SUBTAB 2: COMMUNICATION CHANNELS CONFIG -->
+<div class="hidden" id="admin-subtab-channels">
+<div class="max-w-2xl bg-slate-900/70 p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-xl space-y-6">
+<div>
+<span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Dynamic State Synchronizer</span>
+<h3 class="font-display text-xl font-bold text-white mt-1">Konfigurasi Saluran Kontak Publik</h3>
+<p class="text-xs text-slate-400 mt-1">
+            Setiap perubahan di form ini akan langsung mengupdate tombol WhatsApp, Telegram, dan Email di halaman utama pembeli secara otomatis.
+          </p>
+</div>
+<form class="space-y-5" id="channel-settings-form" onsubmit="saveChannelSettings(event)">
+<!-- WhatsApp -->
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-2">
+<i class="w-4 h-4 text-emerald-400" data-lucide="message-circle"></i> Nomor WhatsApp Admin
+            </label>
+<input class="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors" id="cfg-wa" required="" type="text" value="+62 812-3456-7890"/>
+<span class="text-[11px] text-slate-400 mt-1 block">Format internasional (Contoh: +62 812-xxxx-xxxx)</span>
+</div>
+<!-- Telegram -->
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-2">
+<i class="w-4 h-4 text-sky-400" data-lucide="send"></i> Akun / Link Telegram Admin
+            </label>
+<input class="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors" id="cfg-tg" required="" type="text" value="@rozzxyjb_official"/>
+<span class="text-[11px] text-slate-400 mt-1 block">Username Telegram atau URL channel (Contoh: @rozzxyjb_official)</span>
+</div>
+<!-- Email -->
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1.5 flex items-center gap-2">
+<i class="w-4 h-4 text-indigo-400" data-lucide="mail"></i> Email Dukungan / CEO
+            </label>
+<input class="w-full bg-slate-950 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors" id="cfg-email" required="" type="email" value="ceo@rozzxyjb.com"/>
+<span class="text-[11px] text-slate-400 mt-1 block">Alamat email resmi untuk konfirmasi pesanan &amp; inquiry B2B</span>
+</div>
+<!-- Submit Button -->
+<div class="pt-4 flex items-center gap-3">
+<button class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/30 transition-all flex items-center gap-2" type="submit">
+<i class="w-4 h-4" data-lucide="check"></i> Simpan &amp; Sinkronkan ke Front-end
+            </button>
+<span class="text-xs text-emerald-400 font-semibold hidden flex items-center gap-1" id="channel-sync-status">
+<i class="w-4 h-4" data-lucide="check-circle"></i> Saluran berhasil diperbarui secara live!
+            </span>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- ==================================================== -->
+<!-- SLIDE-OUT CART DRAWER (ULTRA SMOOTH RIGHT SLIDE)     -->
+<!-- ==================================================== -->
+<div class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" id="cart-drawer-overlay" onclick="toggleCartDrawer(false)"></div>
+<aside class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-slate-900 border-l border-slate-800 z-50 flex flex-col shadow-2xl transform translate-x-full transition-transform duration-300 ease-out" id="cart-drawer">
+<!-- Drawer Header -->
+<div class="p-6 border-b border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="p-2 rounded-lg bg-blue-600/20 text-blue-400">
+<i class="w-5 h-5" data-lucide="shopping-bag"></i>
+</div>
+<div>
+<h3 class="font-display text-lg font-bold text-white">Keranjang Belanja &amp; Sewa</h3>
+<p class="text-xs text-slate-400">Ringkasan item sebelum checkout</p>
+</div>
+</div>
+<button class="p-2 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" onclick="toggleCartDrawer(false)">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+</div>
+<!-- Drawer Content / Items List -->
+<div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-items-container">
+<!-- Generated by JS -->
+</div>
+<!-- Drawer Footer / Summary -->
+<div class="p-6 border-t border-slate-800 bg-slate-950/80 space-y-4">
+<div class="space-y-1.5 text-xs">
+<div class="flex justify-between text-slate-400">
+<span>Subtotal Item</span>
+<span class="font-semibold text-slate-200" id="cart-subtotal">Rp 0</span>
+</div>
+<div class="flex justify-between text-slate-400">
+<span>Biaya Layanan &amp; Asuransi</span>
+<span class="text-emerald-400 font-semibold">GRATIS</span>
+</div>
+<div class="flex justify-between text-sm font-bold text-white pt-2 border-t border-slate-800">
+<span>Total Tagihan</span>
+<span class="text-blue-400 text-base" id="cart-total">Rp 0</span>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-xl shadow-blue-600/30 hover:shadow-blue-500/50 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:pointer-events-none" id="btn-proceed-checkout" onclick="openCheckoutModal()">
+<span>Lanjut ke Pembayaran</span>
+<i class="w-4 h-4" data-lucide="arrow-right"></i>
+</button>
+</div>
+</div>
+</aside>
+<!-- ==================================================== -->
+<!-- CHECKOUT & PAYMENT GATEWAY MODAL                     -->
+<!-- ==================================================== -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="checkout-modal">
+<div class="relative w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300">
+<!-- Checkout Header -->
+<div class="p-6 border-b border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white">
+<i class="w-5 h-5" data-lucide="credit-card"></i>
+</div>
+<div>
+<h3 class="font-display text-lg font-bold text-white">Checkout &amp; Gateway Pembayaran</h3>
+<p class="text-xs text-slate-400">Brand rozzxyjb ceo • Transaksi Terenkripsi 256-bit</p>
+</div>
+</div>
+<button class="p-2 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" onclick="closeCheckoutModal()">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+</div>
+<!-- Checkout Body -->
+<div class="p-6 max-h-[75vh] overflow-y-auto space-y-6">
+<!-- Customer Details -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Informasi Pemesan</h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<input class="bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500" id="pay-name" placeholder="Nama Lengkap Pemesan" type="text" value="Reynaldi Pratama"/>
+<input class="bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500" id="pay-phone" placeholder="Nomor Telepon (WhatsApp)" type="tel" value="081399887766"/>
+</div>
+<input class="mt-3 w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500" id="pay-address" placeholder="Alamat Pengiriman / Lokasi Pengambilan Gear" type="text" value="Jl. Sudirman No. 45, Jakarta Selatan"/>
+</div>
+<!-- Payment Method Selection -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Pilih Metode Pembayaran</h4>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<label class="cursor-pointer border border-slate-800 has-[:checked]:border-blue-500 has-[:checked]:bg-blue-600/10 rounded-2xl p-4 transition-all duration-200 block">
+<input checked="" class="sr-only" name="payment_method" type="radio" value="bank"/>
+<div class="flex items-center justify-between mb-2">
+<i class="w-5 h-5 text-blue-400" data-lucide="landmark"></i>
+<span class="w-3.5 h-3.5 rounded-full border border-blue-500 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-blue-500"></span>
+</span>
+</div>
+<p class="text-xs font-bold text-white">Transfer Bank</p>
+<p class="text-[10px] text-slate-400 mt-0.5">BCA, Mandiri, BNI Virtual Account</p>
+</label>
+<label class="cursor-pointer border border-slate-800 has-[:checked]:border-blue-500 has-[:checked]:bg-blue-600/10 rounded-2xl p-4 transition-all duration-200 block">
+<input class="sr-only" name="payment_method" type="radio" value="ewallet"/>
+<div class="flex items-center justify-between mb-2">
+<i class="w-5 h-5 text-emerald-400" data-lucide="qr-code"></i>
+<span class="w-3.5 h-3.5 rounded-full border border-slate-600"></span>
+</div>
+<p class="text-xs font-bold text-white">QRIS / E-Wallet</p>
+<p class="text-[10px] text-slate-400 mt-0.5">GoPay, OVO, Dana, ShopeePay</p>
+</label>
+<label class="cursor-pointer border border-slate-800 has-[:checked]:border-blue-500 has-[:checked]:bg-blue-600/10 rounded-2xl p-4 transition-all duration-200 block">
+<input class="sr-only" name="payment_method" type="radio" value="cc"/>
+<div class="flex items-center justify-between mb-2">
+<i class="w-5 h-5 text-amber-400" data-lucide="credit-card"></i>
+<span class="w-3.5 h-3.5 rounded-full border border-slate-600"></span>
+</div>
+<p class="text-xs font-bold text-white">Kartu Kredit / Debit</p>
+<p class="text-[10px] text-slate-400 mt-0.5">Visa, Mastercard 3D-Secure</p>
+</label>
+</div>
+</div>
+<!-- Order Summary Breakdown -->
+<div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 space-y-2">
+<div class="flex justify-between text-xs text-slate-400">
+<span>Daftar Pesanan:</span>
+<span class="text-slate-200 font-medium" id="checkout-items-summary-text">0 item</span>
+</div>
+<div class="flex justify-between text-xs text-slate-400">
+<span>Proteksi Asuransi Gear:</span>
+<span class="text-emerald-400 font-semibold">Tercakup (Free)</span>
+</div>
+<div class="flex justify-between text-sm font-bold text-white pt-2 border-t border-slate-800">
+<span>Total Pembayaran</span>
+<span class="text-blue-400 text-lg" id="checkout-final-total">Rp 0</span>
+</div>
+</div>
+</div>
+<!-- Checkout Footer -->
+<div class="p-6 border-t border-slate-800 bg-slate-950/60 flex items-center justify-between">
+<button class="px-5 py-2.5 rounded-xl text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" onclick="closeCheckoutModal()">
+          Batalkan
+        </button>
+<button class="px-7 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/30 transition-all flex items-center gap-2" onclick="processSimulatedPayment()">
+<i class="w-4 h-4" data-lucide="lock"></i> Bayar Sekarang (Simulasi)
+        </button>
+</div>
+</div>
+</div>
+<!-- ==================================================== -->
+<!-- PAYMENT SUCCESS MODAL NOTIFICATION                   -->
+<!-- ==================================================== -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="payment-success-modal">
+<div class="w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center shadow-2xl transform scale-95 transition-transform duration-300">
+<div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4 animate-bounce">
+<i class="w-8 h-8" data-lucide="check"></i>
+</div>
+<span class="text-xs uppercase font-extrabold tracking-widest text-emerald-400">Pembayaran Berhasil Diselesaikan</span>
+<h3 class="font-display text-2xl font-bold text-white mt-1">Terima Kasih atas Pesanan Anda!</h3>
+<p class="text-xs text-slate-300 mt-2 leading-relaxed">
+        Invoice dan jadwal aktivasi gear telah diteruskan ke saluran WhatsApp &amp; Email Anda. Tim <strong class="text-white">rozzxyjb ceo</strong> siap mengawal pesanan Anda.
+      </p>
+<div class="mt-6 p-4 rounded-xl bg-slate-950 border border-slate-800 text-left text-xs space-y-1.5">
+<div class="flex justify-between text-slate-400">
+<span>Order ID:</span>
+<span class="font-mono text-white" id="order-id-display">#RZ-89210</span>
+</div>
+<div class="flex justify-between text-slate-400">
+<span>Waktu:</span>
+<span class="text-slate-200">Real-time Verified</span>
+</div>
+<div class="flex justify-between text-slate-400">
+<span>Status:</span>
+<span class="text-emerald-400 font-bold">LUNAS / SIAP PROSES</span>
+</div>
+</div>
+<button class="mt-6 w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg shadow-blue-600/30 transition-all" onclick="closeSuccessModal()">
+        Kembali ke Toko
+      </button>
+</div>
+</div>
+<!-- ==================================================== -->
+<!-- MODAL: ADMIN EDIT / CREATE PRODUCT (CRUD FORM)       -->
+<!-- ==================================================== -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="product-modal">
+<div class="w-full max-w-xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300">
+<div class="p-6 border-b border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="p-2 rounded-lg bg-blue-600/20 text-blue-400">
+<i class="w-5 h-5" data-lucide="edit-3"></i>
+</div>
+<div>
+<h3 class="font-display text-lg font-bold text-white" id="product-modal-title">Edit Item Inventaris</h3>
+<p class="text-xs text-slate-400">Ubah detail spesifikasi, harga, atau foto</p>
+</div>
+</div>
+<button class="p-2 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" onclick="closeProductModal()">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+</div>
+<form class="p-6 space-y-4 max-h-[75vh] overflow-y-auto" id="product-crud-form" onsubmit="handleProductFormSubmit(event)">
+<input id="form-item-id" type="hidden"/>
+<!-- Nama Produk -->
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1">Nama Produk / Gear</label>
+<input class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500" id="form-title" required="" type="text"/>
+</div>
+<!-- Kategori & Tipe Item -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1">Kategori Spesifik</label>
+<select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-blue-500" id="form-category" required="">
+<option value="camera">🎥 Cinema Camera</option>
+<option value="drone">🚁 Drone &amp; Aerial</option>
+<option value="lens">🔍 Cinema Lenses</option>
+<option value="audio">🎙️ Audio Pro</option>
+<option value="lighting">💡 Lighting &amp; Studio</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1">Tipe Transaksi</label>
+<select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-blue-500" id="form-type" onchange="toggleFormRentalInputs()">
+<option value="shop">Dijual (Shop)</option>
+<option value="rental">Disewa (Rental)</option>
+</select>
+</div>
+</div>
+<!-- Harga Pokok -->
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1">Harga Pokok (Beli / Sewa Per Hari)</label>
+<input class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500" id="form-price" min="1000" required="" type="number"/>
+</div>
+<!-- Rental Specific: Weekly Price (Hidden if shop) -->
+<div class="hidden" id="form-rental-weekly-group">
+<label class="block text-xs font-semibold text-slate-300 mb-1">Harga Sewa Mingguan (Per 7 Hari)</label>
+<input class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500" id="form-weekly-price" min="1000" type="number"/>
+<span class="text-[10px] text-slate-400 mt-1 block">Tampilkan tarif hemat untuk pelanggan sewa jangka panjang</span>
+</div>
+<!-- URL Gambar / Foto -->
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1">URL Foto Produk (Unsplash / CDN)</label>
+<input class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500" id="form-image" required="" type="url"/>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] text-slate-400">Preset Cepat:</span>
+<button class="text-[10px] text-blue-400 hover:underline" onclick="setPresetImg('camera')" type="button">Kamera Cinema</button>
+<button class="text-[10px] text-blue-400 hover:underline" onclick="setPresetImg('drone')" type="button">Drone 4K</button>
+<button class="text-[10px] text-blue-400 hover:underline" onclick="setPresetImg('lens')" type="button">Lensa Prime</button>
+</div>
+</div>
+<!-- Deskripsi Produk -->
+<div>
+<label class="block text-xs font-semibold text-slate-300 mb-1">Deskripsi Spesifikasi</label>
+<textarea class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500" id="form-description" required="" rows="3"></textarea>
+</div>
+<div class="pt-3 border-t border-slate-800 flex items-center justify-end gap-3">
+<button class="px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white" onclick="closeProductModal()" type="button">Batal</button>
+<button class="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg shadow-blue-600/30 transition-all" type="submit">
+            Simpan Perubahan
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-container"></div>
+<!-- ==================================================== -->
+<!-- JAVASCRIPT STATE ENGINE & REACTIVE LOGIC             -->
+<!-- ==================================================== -->
+<script>
+    // INITIAL DATABASE STATE (Synchronized)
+    const state = {
+      view: 'store', // 'store' or 'admin'
+      catalogFilter: 'all', // 'all', 'shop', 'rental'
+      specificCategory: 'all', // 'all', 'camera', 'drone', 'lens', 'audio', 'lighting'
+      searchQuery: '',
+      adminSearch: '',
+      adminSubTab: 'products',
+      // Admin Channels State
+      channels: {
+        whatsapp: '+62 812-3456-7890',
+        telegram: '@rozzxyjb_official',
+        email: 'ceo@rozzxyjb.com'
+      },
+      // Products Inventory Data
+      items: [
+        {
+          id: 'item-1',
+          type: 'shop',
+          category: 'camera',
+          title: 'Sony Alpha FX3 Cinema Line Full-Frame',
+          description: 'Kamera sinema profesional 4K 120p, 10-bit 4:2:2, ISO ekspansi 409600, pendingin aktif terintegrasi.',
+          price: 54900000,
+          rentalDaily: null,
+          rentalWeekly: null,
+          image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80',
+          stock: 'Tersedia 4 Unit'
+        },
+        {
+          id: 'item-2',
+          type: 'rental',
+          category: 'drone',
+          title: 'DJI Inspire 3 Pro 8K Cinema Drone',
+          description: 'Full-frame 8K ProRes RAW gimbal drone, Waypoint Pro, sensor obstakel omnidirectional, dual control.',
+          price: 1850000, // Harga sewa per hari
+          rentalDaily: 1850000,
+          rentalWeekly: 10500000,
+          image: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80',
+          stock: 'Siap Sewa (Teruji)'
+        },
+        {
+          id: 'item-3',
+          type: 'shop',
+          category: 'lens',
+          title: 'Leica Summilux-M 35mm f/1.4 ASPH Lens',
+          description: 'Lensa legendaris manual Jerman dengan ketajaman absolut, bokeh creamy sinematik, build titanium.',
+          price: 76500000,
+          rentalDaily: null,
+          rentalWeekly: null,
+          image: 'https://images.unsplash.com/photo-1617005082133-548c4dd27f35?auto=format&fit=crop&w=800&q=80',
+          stock: 'Unit Kolektor Terbatas'
+        },
+        {
+          id: 'item-4',
+          type: 'rental',
+          category: 'lighting',
+          title: 'Aputure LS 600d Pro Daylight Studio Rig',
+          description: 'Lampu continuous daylight 600W COB LED tahan cuaca, kontrol wireless Sidus Link, lengkap softbox & C-stand.',
+          price: 450000, // Sewa per hari
+          rentalDaily: 450000,
+          rentalWeekly: 2500000,
+          image: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80',
+          stock: 'Siap Sewa 8 Set'
+        },
+        {
+          id: 'item-5',
+          type: 'shop',
+          category: 'audio',
+          title: 'Sennheiser MKH 416 Moisture-Resistant Mic',
+          description: 'Shotgun microphone standar industri film Hollywood, super-cardioid pola tajam dengan self-noise rendah.',
+          price: 16800000,
+          rentalDaily: null,
+          rentalWeekly: null,
+          image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80',
+          stock: 'Garansi Resmi 2 Thn'
+        },
+        {
+          id: 'item-6',
+          type: 'rental',
+          category: 'camera',
+          title: 'Hasselblad X2D 100C Medium Format System',
+          description: 'Sensor 100MP BSI CMOS, 16-bit color, 1TB SSD internal, 5-axis 7-stop IBIS untuk komersial & fashion.',
+          price: 2400000, // Sewa per hari
+          rentalDaily: 2400000,
+          rentalWeekly: 13900000,
+          image: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=800&q=80',
+          stock: 'Termasuk 2 Baterai + Charger'
+        }
+      ],
+      // Shopping Cart State
+      cart: []
+    };
+
+    // Category Label Mapping Helper
+    const categoryLabels = {
+      camera: '🎥 Cinema Camera',
+      drone: '🚁 Drone & Aerial',
+      lens: '🔍 Cinema Lenses',
+      audio: '🎙️ Audio Pro',
+      lighting: '💡 Lighting & Studio'
+    };
+
+    // FORMAT CURRENCY HELPER
+    function formatIDR(amount) {
+      return new Intl.NumberFormat('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0
+      }).format(amount);
+    }
+
+    // TOAST SYSTEM
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const icon = type === 'success' ? 'check-circle-2' : 'info';
+      const borderCol = type === 'success' ? 'border-emerald-500/50' : 'border-blue-500/50';
+      const textCol = type === 'success' ? 'text-emerald-400' : 'text-blue-400';
+
+      toast.className = `pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-xl bg-slate-900/95 border ${borderCol} shadow-2xl backdrop-blur-md text-xs font-semibold text-slate-100 transform translate-y-3 opacity-0 transition-all duration-300`;
+      toast.innerHTML = `<i data-lucide="${icon}" class="w-4 h-4 ${textCol}"></i> <span>${message}</span>`;
+      
+      container.appendChild(toast);
+      lucide.createIcons();
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-3', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-2', 'opacity-0');
+        setTimeout(() => toast.remove(), 350);
+      }, 3200);
+    }
+
+    // VIEW SWITCHER (Storefront vs Admin Manager)
+    function switchView(target) {
+      state.view = target;
+      const clientView = document.getElementById('client-view');
+      const adminView = document.getElementById('admin-view');
+      const adminBtnText = document.getElementById('admin-btn-text');
+      const publicNavLinks = document.getElementById('public-nav-links');
+
+      if (target === 'admin') {
+        clientView.classList.add('hidden');
+        adminView.classList.remove('hidden');
+        adminBtnText.textContent = "Ke Toko (Shop)";
+        publicNavLinks.classList.add('opacity-40', 'pointer-events-none');
+        renderAdminTable();
+        updateAdminMetrics();
+      } else {
+        adminView.classList.add('hidden');
+        clientView.classList.remove('hidden');
+        adminBtnText.textContent = "Admin Manager";
+        publicNavLinks.classList.remove('opacity-40', 'pointer-events-none');
+        renderCatalog();
+      }
+      lucide.createIcons();
+    }
+
+    function toggleMode() {
+      switchView(state.view === 'store' ? 'admin' : 'store');
+    }
+
+    // FILTER CATALOG TABS (All / Shop / Rental)
+    function filterCatalog(category) {
+      state.catalogFilter = category;
+      
+      const btnAll = document.getElementById('btn-filter-all');
+      const btnShop = document.getElementById('btn-filter-shop');
+      const btnRental = document.getElementById('btn-filter-rental');
+
+      [btnAll, btnShop, btnRental].forEach(btn => {
+        btn.className = "px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 text-slate-400 hover:text-white hover:bg-slate-800";
+      });
+
+      const activeClass = "px-5 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 bg-blue-600 text-white shadow-sm";
+      if (category === 'all') btnAll.className = activeClass;
+      if (category === 'shop') btnShop.className = activeClass;
+      if (category === 'rental') btnRental.className = activeClass;
+
+      renderCatalog();
+    }
+
+    // SPECIFIC CATEGORY PILL FILTER
+    function setSpecificCategory(cat) {
+      state.specificCategory = cat;
+      const allPills = ['all', 'camera', 'drone', 'lens', 'audio', 'lighting'];
+
+      allPills.forEach(p => {
+        const el = document.getElementById(`cat-pill-${p}`);
+        if (!el) return;
+        if (p === cat) {
+          el.className = "px-4 py-2 rounded-xl text-xs font-bold border transition-all duration-200 bg-blue-600 text-white border-blue-500 shadow-lg shadow-blue-600/25 flex items-center gap-2";
+        } else {
+          el.className = "px-4 py-2 rounded-xl text-xs font-medium border border-slate-800 bg-slate-900/70 text-slate-300 hover:text-white hover:border-slate-700 hover:bg-slate-800/80 transition-all duration-200 flex items-center gap-2";
+        }
+      });
+
+      renderCatalog();
+    }
+
+    function handleSearch(term) {
+      state.searchQuery = term.toLowerCase();
+      renderCatalog();
+    }
+
+    // RENDER PRODUCT CATALOG (Front-end)
+    function renderCatalog() {
+      const grid = document.getElementById('product-grid');
+      let filtered = state.items;
+
+      // 1. Filter by transaction type (all, shop, rental)
+      if (state.catalogFilter !== 'all') {
+        filtered = filtered.filter(item => item.type === state.catalogFilter);
+      }
+
+      // 2. Filter by specific category
+      if (state.specificCategory !== 'all') {
+        filtered = filtered.filter(item => item.category === state.specificCategory);
+      }
+
+      // 3. Filter by search query
+      if (state.searchQuery) {
+        filtered = filtered.filter(item => 
+          item.title.toLowerCase().includes(state.searchQuery) ||
+          item.description.toLowerCase().includes(state.searchQuery) ||
+          (item.category && item.category.toLowerCase().includes(state.searchQuery))
+        );
+      }
+
+      document.getElementById('items-count-badge').textContent = `${filtered.length} Item Tersedia`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center">
+            <i data-lucide="package-search" class="w-12 h-12 text-slate-600 mx-auto mb-3"></i>
+            <p class="text-sm font-bold text-slate-400">Tidak ada produk atau gear yang sesuai dengan kriteria filter Anda.</p>
+            <button onclick="setSpecificCategory('all'); filterCatalog('all'); document.getElementById('catalog-search').value='';" class="mt-4 px-4 py-2 rounded-xl text-xs bg-slate-800 hover:bg-slate-700 text-blue-400 font-bold transition-all">
+              Reset Semua Filter
+            </button>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => {
+        const isRental = item.type === 'rental';
+        const badgeLabel = isRental ? 'Rental Gear' : 'Ready Stock';
+        const badgeColor = isRental ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30' : 'bg-blue-500/20 text-blue-300 border-blue-500/30';
+        const categoryBadgeText = categoryLabels[item.category] || item.category || 'Gear';
+        
+        return `
+          <div class="glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-slate-700 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+            
+            <!-- Media Container -->
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-900">
+              <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              
+              <!-- Badges Top Container -->
+              <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase border backdrop-blur-md ${badgeColor}">
+                  ${badgeLabel}
+                </span>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wide bg-slate-950/80 text-slate-200 border border-slate-700/60 backdrop-blur-md">
+                  ${categoryBadgeText}
+                </span>
+              </div>
+
+              <!-- Stock Availability Tag -->
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-semibold text-slate-300">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  ${item.stock || 'Unit Tersedia'}
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Details -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-display text-lg font-bold text-white group-hover:text-blue-300 transition-colors line-clamp-1">
+                  ${item.title}
+                </h3>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed line-clamp-2">
+                  ${item.description}
+                </p>
+              </div>
+
+              <!-- Pricing & Rental Duration Selector -->
+              <div class="pt-4 border-t border-slate-800/80">
+                ${isRental ? `
+                  <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-slate-400">Pilih Durasi Sewa:</span>
+                      <div class="inline-flex p-0.5 bg-slate-950 rounded-lg border border-slate-800">
+                        <button type="button" onclick="selectDuration('${item.id}', 'daily')" id="dur-daily-${item.id}" class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-600 text-white transition-all">
+                          1 Hari
+                        </button>
+                        <button type="button" onclick="selectDuration('${item.id}', 'weekly')" id="dur-weekly-${item.id}" class="px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition-all">
+                          Mingguan (Hemat)
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="flex items-baseline justify-between">
+                      <div>
+                        <span id="price-display-${item.id}" class="font-display text-xl font-extrabold text-indigo-400">
+                          ${formatIDR(item.rentalDaily)}
+                        </span>
+                        <span id="unit-display-${item.id}" class="text-xs text-slate-400">/ hari</span>
+                      </div>
+                      <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-semibold">Bebas Deposit</span>
+                    </div>
+
+                    <button onclick="addToCart('${item.id}')" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-lg shadow-indigo-600/30 hover:shadow-indigo-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                      <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                      Booking Rental
+                    </button>
+                  </div>
+                ` : `
+                  <div class="space-y-3">
+                    <div class="flex items-baseline justify-between">
+                      <div>
+                        <span class="text-[10px] uppercase font-bold text-slate-400 block">Harga Resmi Beli</span>
+                        <span class="font-display text-xl font-extrabold text-blue-400">
+                          ${formatIDR(item.price)}
+                        </span>
+                      </div>
+                      <span class="text-[10px] text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded font-semibold">Garansi 2 Thn</span>
+                    </div>
+
+                    <button onclick="addToCart('${item.id}')" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg shadow-blue-600/30 hover:shadow-blue-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                      <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                      Tambah ke Keranjang
+                    </button>
+                  </div>
+                `}
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // RENTAL DURATION TOGGLE
+    const itemDurations = {}; // store chosen duration: 'daily' | 'weekly'
+    function selectDuration(itemId, duration) {
+      itemDurations[itemId] = duration;
+      const item = state.items.find(i => i.id === itemId);
+      if (!item) return;
+
+      const btnDaily = document.getElementById(`dur-daily-${itemId}`);
+      const btnWeekly = document.getElementById(`dur-weekly-${itemId}`);
+      const priceDisplay = document.getElementById(`price-display-${itemId}`);
+      const unitDisplay = document.getElementById(`unit-display-${itemId}`);
+
+      if (duration === 'weekly') {
+        btnDaily.className = "px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition-all";
+        btnWeekly.className = "px-2.5 py-1 rounded-md text-[11px] font-bold bg-indigo-600 text-white transition-all";
+        priceDisplay.textContent = formatIDR(item.rentalWeekly || item.rentalDaily * 6);
+        unitDisplay.textContent = "/ 7 hari (Mingguan)";
+      } else {
+        btnDaily.className = "px-2.5 py-1 rounded-md text-[11px] font-bold bg-blue-600 text-white transition-all";
+        btnWeekly.className = "px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-400 hover:text-white transition-all";
+        priceDisplay.textContent = formatIDR(item.rentalDaily);
+        unitDisplay.textContent = "/ hari";
+      }
+    }
+
+    // CART STATE MANAGEMENT
+    function addToCart(itemId) {
+      const item = state.items.find(i => i.id === itemId);
+      if (!item) return;
+
+      const duration = itemDurations[itemId] || 'daily';
+      let effectivePrice = item.price;
+      let durationLabel = '';
+
+      if (item.type === 'rental') {
+        if (duration === 'weekly') {
+          effectivePrice = item.rentalWeekly || (item.rentalDaily * 6);
+          durationLabel = 'Sewa 1 Minggu (7 Hari)';
+        } else {
+          effectivePrice = item.rentalDaily;
+          durationLabel = 'Sewa 1 Hari';
+        }
+      }
+
+      // Check if item already exists in cart with same duration
+      const existingIdx = state.cart.findIndex(c => c.id === item.id && c.duration === duration);
+      if (existingIdx > -1) {
+        state.cart[existingIdx].qty += 1;
+      } else {
+        state.cart.push({
+          cartId: `${item.id}-${Date.now()}`,
+          id: item.id,
+          type: item.type,
+          category: item.category,
+          title: item.title,
+          image: item.image,
+          price: effectivePrice,
+          duration: duration,
+          durationLabel: durationLabel,
+          qty: 1
+        });
+      }
+
+      updateCartBadge();
+      renderCartDrawer();
+      showToast(`Berhasil menambahkan "${item.title}" ke keranjang!`);
+    }
+
+    function quickAddHeroItem() {
+      addToCart('item-1');
+    }
+
+    function updateCartBadge() {
+      const totalQty = state.cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById('cart-counter').textContent = totalQty;
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cart-drawer');
+      const overlay = document.getElementById('cart-drawer-overlay');
+      if (open) {
+        renderCartDrawer();
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        overlay.classList.add('opacity-100');
+        drawer.classList.remove('translate-x-full');
+      } else {
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        overlay.classList.remove('opacity-100');
+        drawer.classList.add('translate-x-full');
+      }
+    }
+
+    function renderCartDrawer() {
+      const container = document.getElementById('cart-items-container');
+      const subtotalEl = document.getElementById('cart-subtotal');
+      const totalEl = document.getElementById('cart-total');
+      const checkoutBtn = document.getElementById('btn-proceed-checkout');
+
+      if (state.cart.length === 0) {
+        container.innerHTML = `
+          <div class="h-full flex flex-col items-center justify-center text-center p-8 text-slate-400">
+            <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center text-slate-500 mb-4">
+              <i data-lucide="shopping-cart" class="w-8 h-8"></i>
+            </div>
+            <h4 class="font-display text-base font-bold text-white">Keranjang Masih Kosong</h4>
+            <p class="text-xs text-slate-400 mt-1">Pilih item dari kategori Shop atau Rental Gear untuk mulai transaksi.</p>
+            <button onclick="toggleCartDrawer(false)" class="mt-4 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all">
+              Mulai Eksplorasi
+            </button>
+          </div>
+        `;
+        subtotalEl.textContent = 'Rp 0';
+        totalEl.textContent = 'Rp 0';
+        checkoutBtn.disabled = true;
+        lucide.createIcons();
+        return;
+      }
+
+      checkoutBtn.disabled = false;
+      let totalAmount = 0;
+
+      container.innerHTML = state.cart.map((cartItem, idx) => {
+        const itemSubtotal = cartItem.price * cartItem.qty;
+        totalAmount += itemSubtotal;
+
+        return `
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 flex gap-3.5 items-center">
+            <img src="${cartItem.image}" alt="${cartItem.title}" class="w-16 h-16 rounded-xl object-cover bg-slate-900 border border-slate-800">
+            <div class="flex-1 min-w-0">
+              <span class="text-[9px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded ${cartItem.type === 'rental' ? 'bg-indigo-500/20 text-indigo-300' : 'bg-blue-500/20 text-blue-300'}">
+                ${cartItem.type === 'rental' ? cartItem.durationLabel : 'Beli (Shop)'}
+              </span>
+              <h4 class="text-xs font-bold text-white truncate mt-1">${cartItem.title}</h4>
+              <p class="text-xs font-semibold text-blue-400 mt-0.5">${formatIDR(cartItem.price)}</p>
+              
+              <div class="flex items-center justify-between mt-2.5">
+                <div class="flex items-center gap-2 bg-slate-900 rounded-lg p-1 border border-slate-800">
+                  <button onclick="changeQty(${idx}, -1)" class="w-5 h-5 flex items-center justify-center text-slate-400 hover:text-white rounded hover:bg-slate-800 text-xs">-</button>
+                  <span class="text-xs font-bold text-slate-200 px-1">${cartItem.qty}</span>
+                  <button onclick="changeQty(${idx}, 1)" class="w-5 h-5 flex items-center justify-center text-slate-400 hover:text-white rounded hover:bg-slate-800 text-xs">+</button>
+                </div>
+                <button onclick="removeFromCart(${idx})" class="text-xs text-rose-400 hover:text-rose-300 transition-colors p-1">
+                  <i data-lucide="trash-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      subtotalEl.textContent = formatIDR(totalAmount);
+      totalEl.textContent = formatIDR(totalAmount);
+      lucide.createIcons();
+    }
+
+    function changeQty(index, delta) {
+      if (!state.cart[index]) return;
+      state.cart[index].qty += delta;
+      if (state.cart[index].qty <= 0) {
+        state.cart.splice(index, 1);
+      }
+      updateCartBadge();
+      renderCartDrawer();
+    }
+
+    function removeFromCart(index) {
+      state.cart.splice(index, 1);
+      updateCartBadge();
+      renderCartDrawer();
+      showToast('Item berhasil dihapus dari keranjang.');
+    }
+
+    // CHECKOUT MODAL OPERATIONS
+    function openCheckoutModal() {
+      toggleCartDrawer(false);
+      const modal = document.getElementById('checkout-modal');
+      const totalAmount = state.cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const totalCount = state.cart.reduce((sum, item) => sum + item.qty, 0);
+
+      document.getElementById('checkout-final-total').textContent = formatIDR(totalAmount);
+      document.getElementById('checkout-items-summary-text').textContent = `${totalCount} item (${state.cart.map(c => c.title).slice(0,2).join(', ')}${state.cart.length > 2 ? '...' : ''})`;
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      modal.firstElementChild.classList.remove('scale-95');
+      modal.firstElementChild.classList.add('scale-100');
+      lucide.createIcons();
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100');
+      modal.firstElementChild.classList.add('scale-95');
+      modal.firstElementChild.classList.remove('scale-100');
+    }
+
+    function processSimulatedPayment() {
+      closeCheckoutModal();
+      // Generate randomized Order ID
+      const orderNum = Math.floor(10000 + Math.random() * 90000);
+      document.getElementById('order-id-display').textContent = `#RZ-${orderNum}`;
+      
+      // Empty cart
+      state.cart = [];
+      updateCartBadge();
+
+      // Show Success Modal
+      const successModal = document.getElementById('payment-success-modal');
+      successModal.classList.remove('opacity-0', 'pointer-events-none');
+      successModal.classList.add('opacity-100');
+      successModal.firstElementChild.classList.remove('scale-95');
+      successModal.firstElementChild.classList.add('scale-100');
+      lucide.createIcons();
+    }
+
+    function closeSuccessModal() {
+      const successModal = document.getElementById('payment-success-modal');
+      successModal.classList.add('opacity-0', 'pointer-events-none');
+      successModal.classList.remove('opacity-100');
+      successModal.firstElementChild.classList.add('scale-95');
+      successModal.firstElementChild.classList.remove('scale-100');
+    }
+
+    // ====================================================
+    // ADMIN DASHBOARD CRUD & CHANNEL STATE ENGINE
+    // ====================================================
+    function switchAdminTab(tab) {
+      state.adminSubTab = tab;
+      const btnProd = document.getElementById('admin-tab-btn-products');
+      const btnChan = document.getElementById('admin-tab-btn-channels');
+      const subProd = document.getElementById('admin-subtab-products');
+      const subChan = document.getElementById('admin-subtab-channels');
+
+      if (tab === 'products') {
+        btnProd.className = "px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white transition-all flex items-center gap-2";
+        btnChan.className = "px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2";
+        subProd.classList.remove('hidden');
+        subChan.classList.add('hidden');
+      } else {
+        btnChan.className = "px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white transition-all flex items-center gap-2";
+        btnProd.className = "px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition-all flex items-center gap-2";
+        subChan.classList.remove('hidden');
+        subProd.classList.add('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    function updateAdminMetrics() {
+      document.getElementById('admin-metric-total').textContent = state.items.length;
+      document.getElementById('admin-metric-shop').textContent = state.items.filter(i => i.type === 'shop').length;
+      document.getElementById('admin-metric-rental').textContent = state.items.filter(i => i.type === 'rental').length;
+    }
+
+    function adminFilterSearch(val) {
+      state.adminSearch = val.toLowerCase();
+      renderAdminTable();
+    }
+
+    function renderAdminTable() {
+      const tbody = document.getElementById('admin-products-table-body');
+      let filtered = state.items;
+
+      if (state.adminSearch) {
+        filtered = filtered.filter(i => 
+          i.title.toLowerCase().includes(state.adminSearch) || 
+          i.description.toLowerCase().includes(state.adminSearch)
+        );
+      }
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="5" class="p-8 text-center text-slate-500">
+              Tidak ada data produk yang cocok dengan pencarian admin.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(item => {
+        const isRental = item.type === 'rental';
+        const priceInfo = isRental 
+          ? `<div><span class="font-bold text-indigo-400">${formatIDR(item.rentalDaily)}</span><span class="text-[10px] text-slate-400">/hari</span></div><div class="text-[10px] text-slate-400 mt-0.5">Mingguan: ${formatIDR(item.rentalWeekly)}</div>`
+          : `<div><span class="font-bold text-blue-400">${formatIDR(item.price)}</span></div>`;
+        const catLabel = categoryLabels[item.category] || item.category || '-';
+
+        return `
+          <tr class="hover:bg-slate-900/40 transition-colors">
+            <td class="p-4">
+              <div class="flex items-center gap-3">
+                <img src="${item.image}" alt="${item.title}" class="w-12 h-12 rounded-xl object-cover bg-slate-950 border border-slate-800">
+                <div>
+                  <h4 class="font-bold text-white text-xs">${item.title}</h4>
+                  <span class="text-[10px] text-slate-500">ID: ${item.id}</span>
+                </div>
+              </div>
+            </td>
+            <td class="p-4">
+              <div class="space-y-1">
+                <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider ${isRental ? 'bg-indigo-500/10 text-indigo-300 border border-indigo-500/30' : 'bg-blue-500/10 text-blue-300 border border-blue-500/30'}">
+                  ${isRental ? 'Rental Gear' : 'Dijual (Shop)'}
+                </span>
+                <span class="block text-[11px] text-slate-400">${catLabel}</span>
+              </div>
+            </td>
+            <td class="p-4">
+              ${priceInfo}
+            </td>
+            <td class="p-4 max-w-xs">
+              <p class="truncate text-slate-400 text-xs">${item.description}</p>
+            </td>
+            <td class="p-4 text-right">
+              <div class="flex items-center justify-end gap-2">
+                <button onclick="openEditModal('${item.id}')" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-colors" title="Ubah Nama, Harga, Deskripsi, Foto">
+                  <i data-lucide="edit-2" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="deleteProduct('${item.id}')" class="p-2 rounded-lg bg-rose-950/40 hover:bg-rose-900/60 text-rose-400 hover:text-rose-200 border border-rose-800/40 transition-colors" title="Hapus Produk">
+                  <i data-lucide="trash" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    // PRODUCT CREATE / EDIT MODAL LOGIC
+    function openCreateModal() {
+      document.getElementById('product-modal-title').textContent = "Tambah Produk / Gear Baru";
+      document.getElementById('form-item-id').value = "";
+      document.getElementById('form-title').value = "";
+      document.getElementById('form-category').value = "camera";
+      document.getElementById('form-type').value = "shop";
+      document.getElementById('form-price').value = "500000";
+      document.getElementById('form-weekly-price').value = "2500000";
+      document.getElementById('form-image').value = "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80";
+      document.getElementById('form-description').value = "";
+
+      toggleFormRentalInputs();
+      showProductModal();
+    }
+
+    function openEditModal(itemId) {
+      const item = state.items.find(i => i.id === itemId);
+      if (!item) return;
+
+      document.getElementById('product-modal-title').textContent = "Edit Produk / Gear Inventaris";
+      document.getElementById('form-item-id').value = item.id;
+      document.getElementById('form-title').value = item.title;
+      document.getElementById('form-category').value = item.category || "camera";
+      document.getElementById('form-type').value = item.type;
+      document.getElementById('form-price').value = item.type === 'rental' ? item.rentalDaily : item.price;
+      document.getElementById('form-weekly-price').value = item.rentalWeekly || (item.rentalDaily ? item.rentalDaily * 6 : 0);
+      document.getElementById('form-image').value = item.image;
+      document.getElementById('form-description').value = item.description;
+
+      toggleFormRentalInputs();
+      showProductModal();
+    }
+
+    function toggleFormRentalInputs() {
+      const type = document.getElementById('form-type').value;
+      const weeklyGroup = document.getElementById('form-rental-weekly-group');
+      if (type === 'rental') {
+        weeklyGroup.classList.remove('hidden');
+      } else {
+        weeklyGroup.classList.add('hidden');
+      }
+    }
+
+    function setPresetImg(type) {
+      const imgInput = document.getElementById('form-image');
+      if (type === 'camera') imgInput.value = 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80';
+      if (type === 'drone') imgInput.value = 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80';
+      if (type === 'lens') imgInput.value = 'https://images.unsplash.com/photo-1617005082133-548c4dd27f35?auto=format&fit=crop&w=800&q=80';
+    }
+
+    function showProductModal() {
+      const modal = document.getElementById('product-modal');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100');
+      modal.firstElementChild.classList.remove('scale-95');
+      modal.firstElementChild.classList.add('scale-100');
+      lucide.createIcons();
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById('product-modal');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100');
+      modal.firstElementChild.classList.add('scale-95');
+      modal.firstElementChild.classList.remove('scale-100');
+    }
+
+    function handleProductFormSubmit(e) {
+      e.preventDefault();
+      const id = document.getElementById('form-item-id').value;
+      const title = document.getElementById('form-title').value.trim();
+      const category = document.getElementById('form-category').value;
+      const type = document.getElementById('form-type').value;
+      const priceVal = parseFloat(document.getElementById('form-price').value);
+      const weeklyVal = parseFloat(document.getElementById('form-weekly-price').value) || (priceVal * 6);
+      const image = document.getElementById('form-image').value.trim();
+      const description = document.getElementById('form-description').value.trim();
+
+      if (id) {
+        // UPDATE EXISTING ITEM
+        const index = state.items.findIndex(i => i.id === id);
+        if (index > -1) {
+          state.items[index].title = title;
+          state.items[index].category = category;
+          state.items[index].type = type;
+          state.items[index].image = image;
+          state.items[index].description = description;
+
+          if (type === 'rental') {
+            state.items[index].rentalDaily = priceVal;
+            state.items[index].rentalWeekly = weeklyVal;
+            state.items[index].price = priceVal;
+          } else {
+            state.items[index].price = priceVal;
+            state.items[index].rentalDaily = null;
+            state.items[index].rentalWeekly = null;
+          }
+          showToast(`Produk "${title}" berhasil diperbarui!`);
+        }
+      } else {
+        // CREATE NEW ITEM
+        const newItem = {
+          id: `item-${Date.now()}`,
+          type: type,
+          category: category,
+          title: title,
+          description: description,
+          image: image,
+          price: priceVal,
+          rentalDaily: type === 'rental' ? priceVal : null,
+          rentalWeekly: type === 'rental' ? weeklyVal : null,
+          stock: 'Baru Ditambahkan'
+        };
+        state.items.unshift(newItem);
+        showToast(`Produk baru "${title}" berhasil ditambahkan ke katalog!`);
+      }
+
+      closeProductModal();
+      renderAdminTable();
+      updateAdminMetrics();
+      renderCatalog(); // Real-time front-end synchronization
+    }
+
+    function deleteProduct(itemId) {
+      const item = state.items.find(i => i.id === itemId);
+      if (!item) return;
+
+      if (confirm(`Apakah Anda yakin ingin menghapus "${item.title}" dari inventaris?`)) {
+        state.items = state.items.filter(i => i.id !== itemId);
+        showToast(`Item "${item.title}" telah dihapus.`);
+        renderAdminTable();
+        updateAdminMetrics();
+        renderCatalog();
+      }
+    }
+
+    // ====================================================
+    // STATE MANAGEMENT: SALURAN KOMUNIKASI (SYNC TO FRONT-END)
+    // ====================================================
+    function saveChannelSettings(e) {
+      e.preventDefault();
+      const newWa = document.getElementById('cfg-wa').value.trim();
+      const newTg = document.getElementById('cfg-tg').value.trim();
+      const newEmail = document.getElementById('cfg-email').value.trim();
+
+      // Update state
+      state.channels.whatsapp = newWa;
+      state.channels.telegram = newTg;
+      state.channels.email = newEmail;
+
+      // Real-time synchronization to front-end elements
+      syncChannelsToFrontEnd();
+
+      // Visual feedback
+      const syncStatus = document.getElementById('channel-sync-status');
+      syncStatus.classList.remove('hidden');
+      setTimeout(() => syncStatus.classList.add('hidden'), 3500);
+
+      showToast("Saluran Komunikasi Admin berhasil disinkronkan ke Front-end!");
+    }
+
+    function syncChannelsToFrontEnd() {
+      // Clean phone number for WhatsApp URL
+      const cleanWa = state.channels.whatsapp.replace(/[^0-9]/g, '');
+      const waLink = document.getElementById('public-wa-link');
+      const waDisplay = document.getElementById('public-wa-display');
+      waLink.href = `https://wa.me/${cleanWa}`;
+      waDisplay.textContent = state.channels.whatsapp;
+
+      // Telegram
+      const cleanTg = state.channels.telegram.replace('@', '');
+      const tgLink = document.getElementById('public-tg-link');
+      const tgDisplay = document.getElementById('public-tg-display');
+      tgLink.href = `https://t.me/${cleanTg}`;
+      tgDisplay.textContent = state.channels.telegram;
+
+      // Email
+      const emailLink = document.getElementById('public-email-link');
+      const emailDisplay = document.getElementById('public-email-display');
+      emailLink.href = `mailto:${state.channels.email}`;
+      emailDisplay.textContent = state.channels.email;
+    }
+
+    // INITIALIZATION & SCROLL REVEAL OBSERVER
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      renderCatalog();
+      syncChannelsToFrontEnd();
+
+      // Simple intersection observer for smooth scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
+</body></html>
